@@ -1,4 +1,10 @@
 <?php
+/**
+ * Created by PhpStorm.
+ * User: lenovo
+ * Date: 2016/12/19
+ * Time: 10:30
+ */
 
 namespace ly\lib\wigdets;
 
@@ -21,6 +27,22 @@ class Pager  extends \yii\widgets\LinkPager{
      */
     public function run()
     {
+        $this->firstPageLabel = Html::tag('i', '', [
+            'class' => 'fa fa-angle-double-left',
+        ]);
+
+        $this->lastPageLabel = Html::tag('i', '', [
+            'class' => 'fa fa-angle-double-right',
+        ]);
+
+        $this->prevPageLabel = Html::tag('i', '', [
+            'class' => 'fa fa-angle-left',
+        ]);
+
+        $this->nextPageLabel = Html::tag('i', '', [
+            'class' => 'fa fa-angle-right',
+        ]);
+
         if ($this->registerLinkTags) {
             $this->registerLinkTags();
         }
